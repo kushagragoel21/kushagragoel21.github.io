@@ -10,6 +10,9 @@
 </head>
 
 <body>
+  <audio id="audio1">
+    <source src="../Songs/Heat Waves.mp3" type="audio/mpeg">
+  </audio>
   <ul class="navbar">
     <li><a href="#home" class="active">Home</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -104,7 +107,7 @@
           <circle class="progress-ring__circle" stroke="#333333" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
           <circle class="progress-ring__circle progress" stroke="#00ffff" stroke-width="8" fill="transparent" r="52" cx="60" cy="60" stroke-linecap="round"/>
         </svg>
-        <div class="percent">90%</div>
+        <div class="percent"><span>0</span>%</div>
       </div>
       <p>Creativity</p>
     </div>
@@ -115,7 +118,7 @@
           <circle class="progress-ring__circle" stroke="#333333" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
           <circle class="progress-ring__circle progress" stroke="#00ffff" stroke-width="8" fill="transparent" r="52" cx="60" cy="60" stroke-linecap="round"/>
         </svg>
-        <div class="percent">65%</div>
+        <div class="percent"><span>0</span>%</div>
       </div>
       <p>Communication</p>
     </div>
@@ -126,7 +129,7 @@
           <circle class="progress-ring__circle" stroke="#333333" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
           <circle class="progress-ring__circle progress" stroke="#00ffff" stroke-width="8" fill="transparent" r="52" cx="60" cy="60" stroke-linecap="round"/>
         </svg>
-        <div class="percent">75%</div>
+        <div class="percent"><span>0</span>%</div>
       </div>    
       <p>Problem Solving</p>
     </div>
@@ -137,7 +140,7 @@
           <circle class="progress-ring__circle" stroke="#333333" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
           <circle class="progress-ring__circle progress" stroke="#00ffff" stroke-width="8" fill="transparent" r="52" cx="60" cy="60" stroke-linecap="round"/>
         </svg>
-        <div class="percent">85%</div>
+        <div class="percent"><span>0</span>%</div>
       </div>
       <p>Teamwork</p>
     </div>
@@ -170,6 +173,20 @@
   </section>  
     
 
-  <script src = "main.js"></script>
+  <script src = "main.js">
+    let number = document.getElementById("number");
+    let counter = 0;
+    setInterval(()=>{
+      if(counter == 90){
+        clearInterval();
+      } 
+      else{
+        counter += 1;
+        number.innerHTML = counter + "%";
+      }
+  
+    },20);
+    
+  </script>
 </body>
 </html>
