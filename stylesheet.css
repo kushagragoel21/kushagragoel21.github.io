@@ -462,3 +462,93 @@ p {
     }
 }
 
+/* Add these media queries at the end of your CSS file */
+
+@media screen and (max-width: 768px) {
+    .portfolio-container {
+      flex-direction: column;
+    }
+  
+    .Left-Container, .Right-Container {
+      width: 100%;
+      height: auto;
+    }
+  
+    .navbar {
+      position: static;
+      flex-direction: column;
+      height: auto;
+      margin-left: 0;
+      padding: 20px 0;
+    }
+  
+    .navbar li {
+      margin-bottom: 10px;
+    }
+  
+    .Content {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  
+    .Design .circle {
+      display: none;
+    }
+  
+    .Skills-List {
+      grid-template-columns: 1fr;
+    }
+  
+    .My-Skills h1, .PRO {
+      margin-left: 20px;
+      font-size: 36px;
+    }
+  
+    .Contact-Me {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .Message, .Contact-Form {
+      width: 100%;
+    }
+  
+    .Message h1 {
+      font-size: 48px;
+    }
+  
+    .Message h2 {
+      font-size: 24px;
+    }
+  
+    .skills-container {
+      grid-template-columns: 1fr;
+    }
+
+    .skill svg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .progress-ring__circle {
+        r: 42;
+        cx: 50;
+        cy: 50;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .icons {
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .icons .fa-brands {
+        margin: 0 10px;
+    }
+    
+  }
