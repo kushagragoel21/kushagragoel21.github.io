@@ -27,7 +27,7 @@ body{
     height: 100px;
     display: flex;
     gap: 3.5rem;
-    margin-left: 400px;
+    margin-left: 500px;
     justify-content: center;
     align-items: center;
    
@@ -555,11 +555,11 @@ p {
 
     .circle:nth-child(1){
         background: linear-gradient(90deg, transparent 50%, #262525 50%);
-        width: 5rem; 
+        width: 6rem; 
     }
     
     .circle:nth-child(2){
-        width: 4rem; 
+        width: 5rem; 
         background-size: cover; /* Ensure the image covers the entire circle */
         background-position: center; /* Adjust the position to focus on the lower part of the image */
         box-shadow: 0 0 0.5rem #fff, 0 0 2rem #3877FF, 0 0 2rem #3877FF; 
@@ -581,6 +581,13 @@ p {
         margin-left: 5px;
     }
 
+    .icons .fa-brands:hover{
+        margin-top: 20px;
+        margin-left: 5px;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
     .Right-Container{
         background: linear-gradient(#262525 15%,#3877FF 95%);
         width: 20%;
@@ -594,7 +601,7 @@ p {
         height: 100px;
         display: flex;
         gap: 1.5rem;
-        margin-left: 30px;
+        margin-left: 90px;
         justify-content: center;
         align-items: center;
         font-size: 0.5rem;
@@ -640,24 +647,36 @@ p {
     }
 
     .skills-container {
-        grid-template-columns: 1fr 1fr; /* Show 2 skills per row */
-        gap: 15px;
-      }
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .skill{
+        position: relative;
+        text-align: center;
+    }
     
-      .skill svg {
-        width: 100px; /* Adjust size as needed */
+    .skill svg {
+        width: 100px;
         height: 100px;
-      }
+    }
     
-      .progress-ring__circle {
-        r: 45; /* Adjust radius */
-        cx: 50;
-        cy: 50;
-      }
+    .progress-ring__circle {
+        transition: 0.35s stroke-dashoffset;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
     
-      .percent {
-        font-size: 18px; /* Adjust font size */
-      }
+    }
+    
+    .percent {
+        position: absolute;
+
+        transform: translate(-50%, -50%);
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
     
     .Contact-Me {
         flex-direction: column;
