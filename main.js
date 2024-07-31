@@ -44,7 +44,6 @@ function animateProgressRings() {
     }, duration / steps);
   });
 }
-
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
@@ -79,3 +78,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
   handleScroll();
 });
+
+function handleViewportChange() {
+  if (!animationTriggered) {
+    const professionalSkills = document.getElementById('professional-skills');
+    if (isInViewport(professionalSkills)) {
+      animateProgressRings();
+      animationTriggered = true;
+    }
+  }
+}
+
+window.addEventListener('load', handleViewportChange);
+window.addEventListener('resize', handleViewportChange);
+window.addEventListener('scroll', handleViewportChange);
