@@ -503,7 +503,7 @@ p {
 
     
     .Content h1{
-        font-size: 1rem;
+        font-size: 0.5rem;
         line-height: 1.2;
         margin-bottom: 10px;
     } 
@@ -547,14 +547,14 @@ p {
 
     .circle:nth-child(1){
         background: linear-gradient(90deg, transparent 50%, #262525 50%);
-        width: 15rem; 
+        width: 7.5rem; 
     }
     
     .circle:nth-child(2){
-        width: 12.5rem; 
+        width: 6rem; 
         background-size: cover; /* Ensure the image covers the entire circle */
         background-position: center; /* Adjust the position to focus on the lower part of the image */
-        box-shadow: 0 0 1rem #fff, 0 0 2rem #3877FF, 0 0 4rem #3877FF; 
+        box-shadow: 0 0 0.5rem #fff, 0 0 2rem #3877FF, 0 0 2rem #3877FF; 
     }
 
     .navbar {
