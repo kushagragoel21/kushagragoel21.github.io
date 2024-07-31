@@ -466,89 +466,136 @@ p {
 
 @media screen and (max-width: 768px) {
     .portfolio-container {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+    
     .Left-Container, .Right-Container {
-      width: 100%;
-      height: auto;
+        width: 100%;
+        height: auto;
+        padding: 20px;
     }
-  
+
+    .Content h1, .Content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .Intro, .p2 {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .Design .circle {
+        position: static;
+        margin: 20px auto;
+        width: 200px;
+        height: 200px;
+    }
+
     .navbar {
-      position: static;
-      flex-direction: column;
-      height: auto;
-      margin-left: 0;
-      padding: 20px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(38, 37, 37, 0.9);
+        justify-content: space-around;
+        padding: 10px 0;
     }
-  
+    
     .navbar li {
-      margin-bottom: 10px;
+        margin: 0 5px;
+    }
+
+    .icons {
+        position: fixed;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        flex-direction: column;
+    }
+    
+    .icons .fa-brands {
+        margin: 10px 0;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+    
+    .btn-container button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
     }
   
     .Content {
-      margin-left: 20px;
-      margin-right: 20px;
+        margin: 60px 20px 20px;
+        text-align: left;
     }
-  
-    .Design .circle {
-      display: none;
+
+    .circle:nth-child(2) {
+        width: 140px;
+        height: 140px;
     }
   
     .Skills-List {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+        gap: 90px; /* Reduce gap between skill items */
     }
   
     .My-Skills h1, .PRO {
-      margin-left: 20px;
-      font-size: 36px;
+        margin: 20px 0;
+        font-size: 28px; /* Further reduce font size */
+        margin-left: 50px;
+    }
+  
+    .My-Skills {
+        height: auto; /* Remove fixed height */
+        padding: 20px 0;
     }
   
     .Contact-Me {
-      flex-direction: column;
-      padding: 20px;
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 20px; /* Drastically reduce this margin */
     }
   
     .Message, .Contact-Form {
-      width: 100%;
+        width: 100%;
     }
   
     .Message h1 {
-      font-size: 48px;
+        font-size: 36px; /* Reduce font size */
     }
   
     .Message h2 {
-      font-size: 24px;
+        font-size: 22px;
     }
   
     .skills-container {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr; /* Show 2 skills per row */
+        gap: 15px;
     }
 
     .skill svg {
-        width: 100px;
-        height: 100px;
+        width: 80px; /* Further reduce size */
+        height: 80px;
     }
 
     .progress-ring__circle {
-        r: 42;
-        cx: 50;
-        cy: 50;
+        r: 34;
+        cx: 40;
+        cy: 40;
     }
 
     img {
         max-width: 100%;
         height: auto;
     }
-
-    .icons {
-        flex-direction: row;
-        justify-content: center;
+    
+    /* Add this to reduce space between sections */
+    section {
         margin-bottom: 20px;
     }
-
-    .icons .fa-brands {
-        margin: 0 10px;
-    }
-    
-  }
+}
