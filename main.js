@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
           currentPercent++;
           setProgress(skill, currentPercent);
         }
-      }, 20);
+      }, 50);
     });
   }
 
